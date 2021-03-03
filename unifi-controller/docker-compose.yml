@@ -3,13 +3,12 @@ services:
   unifi-controller:
     image: ghcr.io/linuxserver/unifi-controller
     container_name: unifi-controller
-    env_file: .env
     environment:
       - PUID=1000
       - PGID=1000
       - MEM_LIMIT=1024M #optional
     volumes:
-      - /$APP_PATH/unifi-controller/data:/config
+      - /${APP_PATH}/unifi-controller/:/config
     ports:
       # UniFi STUN port
       - 3478:3478/udp

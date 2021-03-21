@@ -6,6 +6,7 @@ services:
     image: portainer/portainer
     restart: always
     env_file: .env
+    network_mode: host
     ports:
       - "8000:8000"
       - "9000:9000"

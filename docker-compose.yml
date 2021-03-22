@@ -5,27 +5,23 @@ services:
     container_name: portainer
     image: portainer/portainer
     restart: always
-    network_mode: host
     ports:
       - "8000:8000"
       - "9000:9000"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "/$APP_PATH/portainer/data:/data"
+      - "/${APP_PATH}/portainer/data:/data"
   syncthing:
     image: ghcr.io/linuxserver/syncthing
     container_name: syncthing
     hostname: syncthing
-    depends_on: 
-      - portainer
-      - unifi-controller
     environment:
-      - PUID=$UID
-      - PGID=$PID
-      - TZ=$TZ
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TZ}
     volumes:
-      - /$APP_PATH/synthing/config:/config
-      - /$APP_PATH:/app-data:r
+      - /${APP_PATH}/syncthing/config:/config
+      - /${APP_PATH}:/app-data:ro
     ports:
       - 8384:8384
       - 22000:22000

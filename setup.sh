@@ -2,11 +2,9 @@
 
 export APP_PATH=/home/matt/app-data
 export TZ=America/Indiana/Indianapolis
-export GID=$(id -g)
-UID=1000
-PGID=1000
-
-# Memory Limit
+export GROUP_ID=$(id -g)
+export USER_ID=$UID
+# UniFi Controller - Memory Limit
 export UNIFI_CTRLR__MEM_LIMIT=1024M
 
 mkdir -p "$APP_PATH/portainer/data"

@@ -31,6 +31,7 @@ docker-compose up -d
 ```
 
 ## Resources
+- Nginx https://docs.linuxserver.io/images/docker-nginx
 - Portainer https://github.com/portainer/portainer
 - SyncThing https://hub.docker.com/r/linuxserver/syncthing
 - UniFi Controller  https://github.com/linuxserver/docker-unifi-controller

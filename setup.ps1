@@ -1,3 +1,5 @@
+Open-NeoPort "Nginx" "Reverse Proxy HTTP" 80 
+Open-NeoPort "Nginx" "Reverse Proxy HTTPS" 443 
 Open-NeoPort "WSL Ubuntu" "SSH" 2222 
 Open-NeoPort "Portainer" "SSH Tunnel" 8000
 Open-NeoPort "Portainer" "Web UI" 9000
@@ -15,3 +17,5 @@ Open-NeoPort "UniFi" "Mobile Throughput" 6789
 Open-NeoPort "UniFi" "Remote Syslog Port" 5514 "UDP"
 
 Get-NetPorts
+
+

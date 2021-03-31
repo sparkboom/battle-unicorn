@@ -35,3 +35,6 @@ docker-compose up -d
 - Portainer https://github.com/portainer/portainer
 - SyncThing https://hub.docker.com/r/linuxserver/syncthing
 - UniFi Controller  https://github.com/linuxserver/docker-unifi-controller
+- Plex Ports https://support.plex.tv/articles/201543147-what-network-ports-do-i-need-to-allow-through-my-firewall/
+- Plex Docker https://docs.linuxserver.io/images/docker-plex
+- Plex Docker GitHub https://github.com/linuxserver/docker-plex

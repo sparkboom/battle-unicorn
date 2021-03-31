@@ -1,0 +1,58 @@
+version: '2'
+services:
+  portainer:
+    hostname: portainer
+    container_name: portainer
+    image: portainer/portainer
+    restart: always
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/${APP_PATH}/portainer/data:/data"
+  syncthing:
+    image: ghcr.io/linuxserver/syncthing
+    container_name: syncthing
+    hostname: syncthing
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TZ}
+    volumes:
+      - /${APP_PATH}/syncthing/config:/config
+      - /${APP_PATH}:/app-data:ro
+    ports:
+      - 8384:8384
+      - 22000:22000
+      - 21027:21027/udp
+    restart: unless-stopped
+  # unifi-controller:
+  #   image: ghcr.io/linuxserver/unifi-controller
+  #   container_name: unifi-controller
+  #   environment:
+  #     - PUID=$UID
+  #     - PGID=$PID
+  #     - MEM_LIMIT=$UNIFI_CTRLR__MEM_LIMIT
+  #   volumes:
+  #     - /${APP_PATH}/unifi-controller/config:/config
+  #   ports:
+  #     # UniFi STUN port
+  #     - 3478:3478/udp
+  #     # AP Discovery
+  #     - 10001:10001/udp
+  #     # Device communication
+  #     - 8080:8080
+  #     # UniFi Web Admin port
+  #     - 8443:8443
+  #     # Optional. Required for 'Make controller discoverable on L2 network' option
+  #     - 1900:1900/udp
+  #     # Optional. RUniFi Guest Portal HTTPS redirect port
+  #     - 8843:8843
+  #     # Optional. RUniFi Guest Portal HTTP redirect port
+  #     - 8880:8880
+  #     # Optional. For mobile throughput test
+  #     - 6789:6789
+  #     # Optional. Remote syslog port
+  #     - 5514:5514/udp #optional
+  #   restart: unless-stopped

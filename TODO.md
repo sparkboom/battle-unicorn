@@ -1,0 +1,62 @@
+# Next Actions
+
+- reverse proy, https termination 
+    - swag
+- Media
+    - Emby
+    - Ubooquity?
+    - DAAP - itunes, MPD server,airplay, apple remote, chromecast, spotify, internet radio
+    - mstream
+    - synclounge for plex sharing
+    - tautulli for plex monitoring
+- images
+    - chevereto - for personal images & pn?
+    - lychee?
+    - piwigo, pixapop
+- torrent servic
+    - couch potato, medusa, radarr, sickchill/sickgear, sonarr
+    - headphones
+    - deluge?
+    - Nord VPN
+    - jackett?
+    - lidarr?
+    - qbittorrent, rutorrent, transmission
+- DNS
+    - Nginx reverse proxy?
+    - ddclient - DDNS?
+- Smart Home / Automation
+    - Domoticz
+    - Home Assistant
+    - Alexa skills? Kodi https://lexigr.am/
+- Books
+    - Booksonic? - audio books
+    - ubooquity - pdfs?
+- Notes
+    - Bookstack - to replace Quip?
+    - Hedgedoc?
+    - raneto
+    - wikijs
+- Organisation
+    - Heimdall - dashboard
+    - HTPC manager, muximux - app organiser
+    - tainsun - server app downloader
+- Development
+    - code server - vs code from browser
+    = jenkins - build server
+- Maintenance
+    - healthchecks?
+- Other
+    - Folding at home
+- To Find
+    - genome tools
+- Interesting
+    - nano
+- Files
+    - https://nextcloud.com/
+    - snapdrop
+- Network
+    - OpenVPN, WireGuard
+- Downloader?
+    - https://pyload.net/
+- logstash
+    https://www.elastic.co/logstash
